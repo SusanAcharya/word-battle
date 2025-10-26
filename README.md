@@ -1,42 +1,46 @@
-Word Battler — Mobile-first Word Mini-Games (Next.js + Redis + NextAuth)
+**Word Battler**
 
-Setup
 
-1. Copy env and set values:
+Word Battler is an interactive word gaming platform where players can test their vocabulary, reflexes, and wit through a variety of fast-paced games. You can play solo to sharpen your skills or jump into multiplayer rooms to challenge friends (or strangers) in real time.
 
-```
-cp .env.example .env.local
-```
+It’s part trivia, part competition, and all about quick thinking. Whether you’re guessing words, solving scrambles, or racing against the clock, every round feels like a mini duel of words.
 
-Required variables:
+**Overview**
 
-- NEXTAUTH_SECRET
-- GOOGLE_CLIENT_ID / GOOGLE_CLIENT_SECRET (optional)
-- REDIS_URL (default redis://localhost:6379)
+Players can create or join rooms — public or private — and invite friends through a simple link. The platform features built-in chat for real-time banter and collaboration, making it feel like an actual game night.
 
-2. Install deps:
+**Games include:**
+1. Word Guessing – Guess the hidden word before time runs out.
 
-```
-npm install
-```
+2. Trivia – Test your knowledge across different categories.
 
-3. Run dev:
+3. Scramble – Unscramble letters to find the right word.
 
-```
-npm run dev
-```
+4. Word Timer – Think fast and beat the countdown.
 
-Key routes
+Each game brings its own challenge, keeping sessions fresh and competitive.
 
-- /auth/signup — email+password signup
-- /auth/signin — credentials or Google
-- /hub — game hub
-- /games/wordle-timer — singleplayer MVP
+**Features**
 
-API stubs
+1. Login and authentication system with NextAuth
 
-- POST /api/game/single/wordle-timer/start
-- POST /api/game/single/wordle-timer/submit
-- GET /api/words/[length]
-- GET /api/leaderboard/[game]
-# word-battle
+2. Multiplayer rooms (public/private) with invite links
+
+3. Real-time chat system for players
+
+4. Variety of word and trivia games
+
+5. Smooth and fast performance powered by Redis for real-time data
+
+6. Modern full-stack setup using Next.js
+
+**Tech Stack**
+- Frontend & Backend: Next.js (Full Stack)
+
+- Authentication: NextAuth
+
+- Database / Caching: Redis
+
+- Real-Time Communication: WebSockets / API routes (depending on implementation)
+
+_Word Battler — Mobile-first Word Mini-Games (Next.js + Redis + NextAuth)_
